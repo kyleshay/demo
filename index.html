@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DEMO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <script type="text/javascript" src="scrollnav.js"></script>
+
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #demo {
+      visibility: hidden;
+      margin: 50px auto 0;
+      /*background: hsl(250, 60%, 75%);*/
+    }
+
+    #demo li {
+      text-align: center;
+      background: hsl(120, 60%, 75%);
+    }
+
+    #demo li:nth-child(2n+0) {
+      background: hsl(20, 60%, 75%);
+    }
+
+    .nav {
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      list-style: none;
+      z-index: 10;
+      background-color: white;
+    }
+
+    .nav li.active {
+      border-bottom: 2px solid hsl(250, 60%, 75%);
+      color: #000;
+    }
+
+    .nav li {
+      color: #888;
+      width: 23%;
+      height: 50px;
+      float: left;
+      text-align: center;
+      line-height: 50px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .nav li:last-child {
+      width: 8%;
+    }
+
+    .item div {  
+      margin-top: 0;
+    }
+    .nav-content {
+      background: rgba(0,0,0,.2);
+      height: 100px;  
+      margin-bottom: 10px;
+    }
+
+    #hover {
+      color: white;
+    }
+  </style>
+    <link rel="stylesheet" type="text/css" href="scrollnav.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    window.addEventListener('load', function(){ // on page load
+      var o = {
+        nav: document.getElementById('nav'),
+        offset: 55
+      }
+      scrollnav.init(o);
+    }, false);
+    </script>
+</head>
+<body>
+
+    <div id="thetitle" class="sticky"></div>
+    <ul id="hover" class="hover">
+    </ul>
+    <ul id="nav" class="fixed-nav">
+    </ul>
+
+
+  <ul class="nav">
+    <li data-page="1" class="active">a</li>
+    <li data-page="2">b</li>
+    <li data-page="3">c</li>
+    <li data-page="4">v</li>
+    <li data-page="5">l</li>
+  </ul>
+  <div id="demo">
+    <ul>
+      <li class="item">
+        <div class="row"><div class="title">Primary Weapons</div><div class="nav-content sort-primary"></div></div>
+        <div class="row"><div class="title">Special Weapons</div><div class="nav-content sort-special"></div></div>
+        <div class="row"><div class="title">Heavy Weapons</div><div class="nav-content sort-heavy"></div></div>
+        <div class="row"><div class="title">Helmet</div><div class="nav-content sort-helmet"></div></div>
+        <div class="row"><div class="title">Gauntlets</div><div class="nav-content sort-gauntlets"></div></div>
+        <div class="row"><div class="title">Chest Armor</div><div class="nav-content sort-chest"></div></div>
+        <div class="row"><div class="title">Leg Armor</div><div class="nav-content sort-leg"></div></div>
+        <div class="row"><div class="title">Class Item</div><div class="nav-content sort-class"></div></div>
+        <div class="row"><div class="title">Subclass</div><div class="nav-content sort-titan sort-hunter sort-warlock"></div></div>
+        <div class="row"><div class="title">Emblem</div><div class="nav-content sort-emblem"></div></div>
+        <div class="row"><div class="title">Shader</div><div class="nav-content sort-armor"></div></div>
+        <div class="row"><div class="title">Misc</div><div class="nav-content sort-miscellaneous"></div></div>
+        <div class="row"><div class="title">Ship</div><div class="nav-content sort-ship"></div></div>
+        <div class="row"><div class="title">Ghost</div><div class="nav-content sort-ghost"></div></div>
+      </li>
+      <li class="item">
+        <div class=""><div class="title">Primary Weapons</div><div class="nav-content sort-primary"></div></div>
+        <div class=""><div class="title">Special Weapons</div><div class="nav-content sort-special"></div></div>
+        <div class=""><div class="title">Heavy Weapons</div><div class="nav-content sort-heavy"></div></div>
+        <div class=""><div class="title">Helmet</div><div class="nav-content sort-helmet"></div></div>
+        <div class=""><div class="title">Gauntlets</div><div class="nav-content sort-gauntlets"></div></div>
+        <div class=""><div class="title">Chest Armor</div><div class="nav-content sort-chest"></div></div>
+        <div class=""><div class="title">Leg Armor</div><div class="nav-content sort-leg"></div></div>
+        <div class=""><div class="title">Class Item</div><div class="nav-content sort-class"></div></div>
+        <div class=""><div class="title">Subclass</div><div class="nav-content sort-titan sort-hunter sort-warlock"></div></div>
+        <div class=""><div class="title">Emblem</div><div class="nav-content sort-emblem"></div></div>
+        <div class=""><div class="title">Shader</div><div class="nav-content sort-armor"></div></div>
+        <div class=""><div class="title">Misc</div><div class="nav-content sort-miscellaneous"></div></div>
+        <div class=""><div class="title">Ship</div><div class="nav-content sort-ship"></div></div>
+        <div class=""><div class="title">Ghost</div><div class="nav-content sort-ghost"></div></div>
+      </li>
+      <li class="item">
+        <div class=""><div class="title">Primary Weapons</div><div class="nav-content sort-primary"></div></div>
+        <div class=""><div class="title">Special Weapons</div><div class="nav-content sort-special"></div></div>
+        <div class=""><div class="title">Heavy Weapons</div><div class="nav-content sort-heavy"></div></div>
+        <div class=""><div class="title">Helmet</div><div class="nav-content sort-helmet"></div></div>
+        <div class=""><div class="title">Gauntlets</div><div class="nav-content sort-gauntlets"></div></div>
+        <div class=""><div class="title">Chest Armor</div><div class="nav-content sort-chest"></div></div>
+        <div class=""><div class="title">Leg Armor</div><div class="nav-content sort-leg"></div></div>
+        <div class=""><div class="title">Class Item</div><div class="nav-content sort-class"></div></div>
+        <div class=""><div class="title">Subclass</div><div class="nav-content sort-titan sort-hunter sort-warlock"></div></div>
+        <div class=""><div class="title">Emblem</div><div class="nav-content sort-emblem"></div></div>
+        <div class=""><div class="title">Shader</div><div class="nav-content sort-armor"></div></div>
+        <div class=""><div class="title">Misc</div><div class="nav-content sort-miscellaneous"></div></div>
+        <div class=""><div class="title">Ship</div><div class="nav-content sort-ship"></div></div>
+        <div class=""><div class="title">Ghost</div><div class="nav-content sort-ghost"></div></div>
+      </li>
+      <li class="item">
+        <div class=""><div class="title">Primary Weapons</div><div class="nav-content sort-primary"></div></div>
+        <div class=""><div class="title">Special Weapons</div><div class="nav-content sort-special"></div></div>
+        <div class=""><div class="title">Heavy Weapons</div><div class="nav-content sort-heavy"></div></div>
+        <div class=""><div class="title">Helmet</div><div class="nav-content sort-helmet"></div></div>
+        <div class=""><div class="title">Gauntlets</div><div class="nav-content sort-gauntlets"></div></div>
+        <div class=""><div class="title">Chest Armor</div><div class="nav-content sort-chest"></div></div>
+        <div class=""><div class="title">Leg Armor</div><div class="nav-content sort-leg"></div></div>
+        <div class=""><div class="title">Class Item</div><div class="nav-content sort-class"></div></div>
+        <div class=""><div class="title">Subclass</div><div class="nav-content sort-titan sort-hunter sort-warlock"></div></div>
+        <div class=""><div class="title">Emblem</div><div class="nav-content sort-emblem"></div></div>
+        <div class=""><div class="title">Shader</div><div class="nav-content sort-armor"></div></div>
+        <div class=""><div class="title">Misc</div><div class="nav-content sort-miscellaneous"></div></div>
+        <div class=""><div class="title">Ship</div><div class="nav-content sort-ship"></div></div>
+        <div class=""><div class="title">Ghost</div><div class="nav-content sort-ghost"></div></div>
+      </li>
+      <li class="item">
+        loadouts coming soon.
+      </li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="dragend.js"></script>
+
+  <script>
+
+    $(function() {
+      var container = $('#demo'),
+          navs = $(".nav li"),
+          nav = document.querySelector('.nav');
+
+      function clickTab() {
+        var page = $(event.target).data("page");
+
+        container.dragend({
+          scrollToPage: page
+        });
+
+        resetTab();
+        $(event.target).addClass("active");
+      }
+
+      function resetTab(tab) {
+        navs.removeClass('active');
+        if(tab !== undefined) {
+          $(".nav li").eq(tab).addClass("active");
+        }
+      }
+
+      $(window).on("ready resize", function(event) {
+        var isLarge = $(this).width() > 992;
+
+        nav.addEventListener('click', clickTab);
+        resetTab(0);
+        if(isLarge) {
+          $(".nav li").addClass("active");
+          nav.removeEventListener('click', clickTab);
+        }
+
+        container.dragend({
+          itemsInPage: isLarge ? 5 : 1,
+          pageClass: "item",
+          preventDrag: isLarge,
+          afterInitialize: function() {
+            this.container.style.visibility = "visible";
+          },
+          onSwipeEnd: function() {
+            if(this.page === 4) {
+              window.scrollTo(0, 0)
+            }
+            resetTab(this.page);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
