@@ -49,7 +49,7 @@
 
     .nav li {
       color: #888;
-      width: 23%;
+      width: 25%;
       height: 50px;
       float: left;
       text-align: center;
@@ -58,9 +58,9 @@
       cursor: pointer;
     }
 
-    .nav li:last-child {
+    /*.nav li:last-child {
       width: 8%;
-    }
+    }*/
 
     .item div {  
       margin-top: 0;
@@ -101,7 +101,7 @@
     <li data-page="2">b</li>
     <li data-page="3">c</li>
     <li data-page="4">v</li>
-    <li data-page="5">l</li>
+    <!--<li data-page="5">l</li>-->
   </ul>
   <div id="demo">
     <ul>
@@ -169,9 +169,9 @@
         <div class=""><div class="title">Ship</div><div class="nav-content sort-ship"></div></div>
         <div class=""><div class="title">Ghost</div><div class="nav-content sort-ghost"></div></div>
       </li>
-      <li class="item">
+      <!--<li class="item">
         loadouts coming soon.
-      </li>
+      </li>-->
     </ul>
   </div>
 
@@ -214,16 +214,16 @@
         }
 
         container.dragend({
-          itemsInPage: isLarge ? 5 : 1,
+          itemsInPage: isLarge ? 4 : 1,
           pageClass: "item",
           preventDrag: isLarge,
           afterInitialize: function() {
             this.container.style.visibility = "visible";
           },
           onSwipeEnd: function() {
-            if(this.page === 4) {
-              window.scrollTo(0, 0)
-            }
+            //if(this.page === 4) {
+            //  window.scrollTo(0, 0)
+            //}
             resetTab(this.page);
           }
         });
