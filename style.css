@@ -464,8 +464,3 @@ img.void {
       width: 281px;
     }
 }
-@media (min-width: 993px) {
-    nav, #hover {
-        display: none;
-    }
-}
